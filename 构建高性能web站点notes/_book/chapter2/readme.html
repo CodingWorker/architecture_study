@@ -1,0 +1,499 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第二章 数据的网络传输 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.1-分层网络模型.html" />
+    
+    
+    <link rel="prev" href="../chapter1/1.15-减少视觉等待.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/readme.html">
+            
+                <a href="../chapter1/readme.html">
+            
+                    
+                    第一章 绪论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/1.1-等待的真相.html">
+            
+                <a href="../chapter1/1.1-等待的真相.html">
+            
+                    
+                    1.1 等待的真相
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/1.2-瓶颈在哪里.html">
+            
+                <a href="../chapter1/1.2-瓶颈在哪里.html">
+            
+                    
+                    1.2 瓶颈在哪里
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/1.3-增加带宽.html">
+            
+                <a href="../chapter1/1.3-增加带宽.html">
+            
+                    
+                    1.3 增加带宽
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/1.4-减少网页中的HTTP请求.html">
+            
+                <a href="../chapter1/1.4-减少网页中的HTTP请求.html">
+            
+                    
+                    1.4 减少网页中的HTTP请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter1/1.5-加快服务器脚本计算速度.html">
+            
+                <a href="../chapter1/1.5-加快服务器脚本计算速度.html">
+            
+                    
+                    1.5 加快服务器脚本计算速度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter1/1.6-使用动态内容缓存.html">
+            
+                <a href="../chapter1/1.6-使用动态内容缓存.html">
+            
+                    
+                    1.6 使用动态内容缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter1/1.7-使用数据缓存.html">
+            
+                <a href="../chapter1/1.7-使用数据缓存.html">
+            
+                    
+                    1.7 使用数据缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../chapter1/1.8-将动态内容静态化.html">
+            
+                <a href="../chapter1/1.8-将动态内容静态化.html">
+            
+                    
+                    1.8 将动态内容静态化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../chapter1/1.9-更新web服务器软件.html">
+            
+                <a href="../chapter1/1.9-更新web服务器软件.html">
+            
+                    
+                    1.9 更新web服务器软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../chapter1/1.10-页面组件分离.html">
+            
+                <a href="../chapter1/1.10-页面组件分离.html">
+            
+                    
+                    1.10 页面组件分离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../chapter1/1.11-合理部署服务器.html">
+            
+                <a href="../chapter1/1.11-合理部署服务器.html">
+            
+                    
+                    1.11 合理部署服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../chapter1/1.12-使用负载均衡.html">
+            
+                <a href="../chapter1/1.12-使用负载均衡.html">
+            
+                    
+                    1.12 使用负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../chapter1/1.13-优化数据库.html">
+            
+                <a href="../chapter1/1.13-优化数据库.html">
+            
+                    
+                    1.13 优化数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../chapter1/1.14-考虑可扩展性.html">
+            
+                <a href="../chapter1/1.14-考虑可扩展性.html">
+            
+                    
+                    1.14 考虑可扩展性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../chapter1/1.15-减少视觉等待.html">
+            
+                <a href="../chapter1/1.15-减少视觉等待.html">
+            
+                    
+                    1.15 减少视觉等待
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    第二章 数据的网络传输
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2.1-分层网络模型.html">
+            
+                <a href="2.1-分层网络模型.html">
+            
+                    
+                    2.1 分层网络模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2.2-带宽.html">
+            
+                <a href="2.2-带宽.html">
+            
+                    
+                    2.2 带宽
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第二章 数据的网络传输</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E8C;&#x7AE0;-&#x6570;&#x636E;&#x7684;&#x7F51;&#x8DEF;&#x4F20;&#x8F93;">&#x7B2C;&#x4E8C;&#x7AE0; &#x6570;&#x636E;&#x7684;&#x7F51;&#x8DEF;&#x4F20;&#x8F93;</h1>
+<ul>
+<li>&#x5B58;&#x50A8;&#x8F6C;&#x53D1;</li>
+<li>&#x6D41;&#x91CF;&#x63A7;&#x5236;</li>
+<li>&#x5E26;&#x5BBD;</li>
+<li>&#x54CD;&#x5E94;&#x65F6;&#x95F4;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chapter1/1.15-减少视觉等待.html" class="navigation navigation-prev " aria-label="Previous page: 1.15 减少视觉等待">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.1-分层网络模型.html" class="navigation navigation-next " aria-label="Next page: 2.1 分层网络模型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第二章 数据的网络传输","level":"1.3","depth":1,"next":{"title":"2.1 分层网络模型","level":"1.3.1","depth":2,"path":"chapter2/2.1-分层网络模型.md","ref":"chapter2/2.1-分层网络模型.md","articles":[]},"previous":{"title":"1.15 减少视觉等待","level":"1.2.15","depth":2,"path":"chapter1/1.15-减少视觉等待.md","ref":"chapter1/1.15-减少视觉等待.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/readme.md","mtime":"2017-05-30T08:39:42.915Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-30T09:44:24.443Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
